@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozloženie - Flexbox a Grid</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <script src="scripts/responsive-loader.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Náš Tím</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Domov</a></li>
+                <li><a href="hobbies.html" class="nav-link">Záľuby</a></li>
+                <li><a href="layout.html" class="nav-link active">Rozloženie</a></li>
+                <li><a href="changes.html" class="nav-link">Zmeny</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="layout-demo-section">
+            <h2>Ukážka adaptívneho rozloženia</h2>
+            <p class="section-intro">Táto stránka demonštruje použitie Flexboxu a CSS Grid pre vytvorenie responzívneho rozloženia, ktoré sa prispôsobuje rôznym veľkostiam obrazoviek.</p>
+
+            <div class="layout-container">
+                <!-- Flexbox Demo -->
+                <div class="demo-section">
+                    <h3>Flexbox Rozloženie</h3>
+                    <div class="flexbox-demo">
+                        <div class="flex-item item-1">
+                            <h4>Hlavný obsah</h4>
+                            <p>Flexbox umožňuje flexibilné rozloženie prvkov. Tento blok sa prispôsobuje dostupnému priestoru.</p>
+                        </div>
+                        <div class="flex-item item-2">
+                            <h4>Bočný panel</h4>
+                            <p>Bočný panel môže meniť svoju šírku podľa potreby a dostupného miesta.</p>
+                        </div>
+                        <div class="flex-item item-3">
+                            <h4>Doplňujúci obsah</h4>
+                            <p>Flexbox automaticky rozloží prvky tak, aby využili dostupný priestor efektívne.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid Demo -->
+                <div class="demo-section">
+                    <h3>CSS Grid Rozloženie</h3>
+                    <div class="grid-demo">
+                        <div class="grid-item grid-header">
+                            <h4>Hlavička</h4>
+                            <p>Grid hlavička zaberá celú šírku</p>
+                        </div>
+                        <div class="grid-item grid-sidebar">
+                            <h4>Bočný panel</h4>
+                            <p>Bočný panel v Grid rozložení</p>
+                        </div>
+                        <div class="grid-item grid-main">
+                            <h4>Hlavný obsah</h4>
+                            <p>Hlavný obsah zaberá väčšinu priestoru</p>
+                            <div class="nested-grid">
+                                <div class="nested-item">Položka 1</div>
+                                <div class="nested-item">Položka 2</div>
+                                <div class="nested-item">Položka 3</div>
+                                <div class="nested-item">Položka 4</div>
+                            </div>
+                        </div>
+                        <div class="grid-item grid-footer">
+                            <h4>Päta</h4>
+                            <p>Päta zaberá celú šírku</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combined Demo -->
+                <div class="demo-section">
+                    <h3>Kombinované rozloženie (Flexbox + Grid)</h3>
+                    <div class="combined-demo">
+                        <div class="combined-header">
+                            <h4>Hlavička kombinovaného rozloženia</h4>
+                        </div>
+                        <div class="combined-content">
+                            <div class="combined-sidebar">
+                                <h5>Navigácia</h5>
+                                <ul>
+                                    <li>Položka 1</li>
+                                    <li>Položka 2</li>
+                                    <li>Položka 3</li>
+                                </ul>
+                            </div>
+                            <div class="combined-main">
+                                <h5>Hlavný obsah</h5>
+                                <p>Kombinácia Flexboxu a Gridu poskytuje maximálnu flexibilitu pri vytváraní komplexných rozložení.</p>
+                                <div class="card-grid">
+                                    <div class="card">Karta 1</div>
+                                    <div class="card">Karta 2</div>
+                                    <div class="card">Karta 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="combined-footer">
+                            <p>Päta kombinovaného rozloženia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Náš Tím. Všetky práva vyhradené.</p>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+</body>
+</html>
+

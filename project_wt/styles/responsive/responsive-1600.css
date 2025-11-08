@@ -1,0 +1,137 @@
+/* Responsive CSS for widths >= 1300px */
+/* Modern CSS3 properties demonstration */
+
+/* 1. Premium Box Shadow with colored glow */
+.main-content {
+    box-shadow: 
+        0 20px 50px rgba(102, 126, 234, 0.25),
+        0 10px 20px rgba(118, 75, 162, 0.2),
+        0 0 0 1px rgba(102, 126, 234, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3),
+        0 0 100px rgba(102, 126, 234, 0.1);
+}
+
+/* 2. Premium Transition with elastic bounce */
+.feature-card,
+.hobby-card,
+.change-item {
+    transition: transform 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+                box-shadow 0.5s ease,
+                filter 0.4s ease,
+                background-color 0.4s ease,
+                border-color 0.3s ease;
+}
+
+/* 3. Professional Filter stack */
+.hobby-image .image-placeholder {
+    filter: brightness(1.25) contrast(1.2) saturate(1.5) 
+            drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4))
+            hue-rotate(8deg)
+            sepia(0.1);
+}
+
+/* 4. Advanced 3D Transform with perspective */
+.btn:hover {
+    transform: translateY(-8px) scale(1.12) rotateX(10deg) rotateY(3deg) rotateZ(1deg);
+    transform-style: preserve-3d;
+    perspective: 1500px;
+}
+
+.feature-card:hover {
+    transform: translateY(-12px) scale(1.06) rotateX(5deg) rotateY(2deg);
+    transform-style: preserve-3d;
+    perspective: 1500px;
+}
+
+/* 5. Sophisticated Border Radius */
+.nav-link {
+    border-radius: 30px 12px 30px 12px / 12px 30px 12px 30px;
+}
+
+.hobby-card {
+    border-radius: 20px;
+}
+
+/* 6. Premium Backdrop Filter effects */
+@supports (backdrop-filter: blur(10px)) {
+    .main-header {
+        backdrop-filter: blur(25px) brightness(1.2) contrast(1.15) saturate(1.3);
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.75) 0%, rgba(118, 75, 162, 0.75) 100%);
+    }
+    
+    .controls-section,
+    .hero-section {
+        backdrop-filter: blur(12px) saturate(200%) brightness(1.05);
+    }
+    
+    .change-item {
+        backdrop-filter: blur(2px);
+    }
+}
+
+/* 7. Advanced Grid Template Areas for desktop */
+.features-grid {
+    grid-template-areas:
+        "feature1 feature2 feature3";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.hobbies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Additional premium properties */
+.hero-section {
+    background: linear-gradient(135deg, 
+        rgba(102, 126, 234, 0.3) 0%, 
+        rgba(118, 75, 162, 0.3) 15%,
+        rgba(102, 126, 234, 0.3) 30%,
+        rgba(118, 75, 162, 0.3) 45%,
+        rgba(102, 126, 234, 0.3) 60%,
+        rgba(118, 75, 162, 0.3) 75%,
+        rgba(102, 126, 234, 0.3) 90%,
+        rgba(118, 75, 162, 0.3) 100%);
+    background-size: 500% 500%;
+    animation: gradientPulse 12s ease infinite;
+}
+
+@keyframes gradientPulse {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+}
+
+.hobby-card:hover {
+    transform: translateY(-15px) scale(1.05) rotateY(10deg) rotateX(5deg);
+    perspective: 1500px;
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+}
+
+.change-item:hover {
+    transform: translateX(10px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3),
+                0 0 0 1px rgba(102, 126, 234, 0.1);
+}
+
+/* Grid layout optimizations for large screens */
+.layout-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.grid-demo {
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+}
+
+.combined-content {
+    gap: 2rem;
+}
+
+.combined-sidebar {
+    flex: 0 0 300px;
+}
+

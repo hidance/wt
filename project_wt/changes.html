@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmeny v projekte</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/changes.css">
+    <script src="scripts/responsive-loader.js" defer></script>
+    <script src="scripts/ui.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Náš Tím</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Domov</a></li>
+                <li><a href="hobbies.html" class="nav-link">Záľuby</a></li>
+                <li><a href="layout.html" class="nav-link">Rozloženie</a></li>
+                <li><a href="changes.html" class="nav-link active">Zmeny</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="controls-section">
+            <h2>Ovládanie veľkosti obsahu</h2>
+            <div class="size-controls">
+                <button id="sizeBtn" class="btn btn-primary" aria-label="Zmeniť veľkosť obsahu">Zmeniť veľkosť</button>
+                <select id="sizeDropdown" class="size-select" aria-label="Výber veľkosti">
+                    <option value="small">Malá</option>
+                    <option value="medium" selected>Stredná</option>
+                    <option value="large">Veľká</option>
+                    <option value="xlarge">Extra veľká</option>
+                </select>
+                <div class="keyboard-hint">
+                    <p>Tip: Použite klávesovú skratku <kbd>Ctrl</kbd> + <kbd>+</kbd> pre zväčšenie alebo <kbd>Ctrl</kbd> + <kbd>-</kbd> pre zmenšenie</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sekcia_zmena" class="sekcia_zmena">
+            <h2>Prehľad vykonaných zmien v projekte</h2>
+
+            <article class="change-item">
+                <h3>1. Implementácia responzívneho dizajnu</h3>
+                <p class="change-description">
+                    Vytvorili sme kompletný responzívny dizajn pomocou CSS Media Queries, Flexboxu a CSS Grid. 
+                    Stránka sa prispôsobuje štyrom hlavným breakpointom: 550px (malé mobily), 850px (väčšie smartfóny), 
+                    1250px (notebooky) a 1400px+ (veľké obrazovky). Každý breakpoint má optimalizované rozloženie 
+                    a veľkosti písma pre lepšiu čitateľnosť.
+                </p>
+                <div class="change-benefits">
+                    <h4>Prínosy:</h4>
+                    <ul>
+                        <li>Optimalizované zobrazenie na všetkých zariadeniach</li>
+                        <li>Zlepšená používateľská skúsenosť</li>
+                        <li>Zvýšená dostupnosť obsahu</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="change-item">
+                <h3>2. UX/UI rozhodnutia a vylepšenia</h3>
+                <p class="change-description">
+                    Implementovali sme moderný a čistý dizajn s dôrazom na kontrast, čitateľnosť a intuitívnu navigáciu. 
+                    Pridali sme hover efekty, plynulé prechody (transitions) a vizuálne hierarchiu pomocou typografie a farieb. 
+                    Navigačné menu je responzívne a transformuje sa na hamburger menu na menších obrazovkách.
+                </p>
+                <div class="change-benefits">
+                    <h4>Prínosy:</h4>
+                    <ul>
+                        <li>Zvýšená estetická hodnota stránky</li>
+                        <li>Intuitívnejšia navigácia</li>
+                        <li>Lepšia vizuálna hierarchia informácií</li>
+                        <li>Moderný a profesionálny vzhľad</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="change-item">
+                <h3>3. Prístupnosť pre hendikepovaných používateľov</h3>
+                <p class="change-description">
+                    Výrazne sme zlepšili prístupnosť stránky implementáciou ARIA atribútov, správnych semantických HTML tagov 
+                    a dostatočného kontrastu farieb (WCAG AA štandard). Pridali sme alternatívne texty pre obrázky, 
+                    klávesové skratky pre navigáciu a možnosť zmeny veľkosti textu. Všetky interaktívne prvky sú dostupné 
+                    cez klávesnicu a majú jasné fokusové stavy.
+                </p>
+                <div class="change-benefits">
+                    <h4>Prínosy:</h4>
+                    <ul>
+                        <li>Dostupnosť pre používateľov so zrakovými postihnutiami</li>
+                        <li>Navigácia len pomocou klávesnice</li>
+                        <li>Kompatibilita so screen readermi</li>
+                        <li>Splnenie WCAG štandardov</li>
+                        <li>Zvýšená veľkosť písma pre lepšiu čitateľnosť</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="change-item">
+                <h3>4. Dynamické načítanie CSS štýlov</h3>
+                <p class="change-description">
+                    Implementovali sme JavaScript skript (responsive-loader.js), ktorý automaticky načítava rôzne CSS súbory 
+                    podľa aktuálnej šírky okna. Toto riešenie umožňuje špecializované štýly pre konkrétne rozlíšenia a zlepšuje 
+                    výkon stránky na rôznych zariadeniach.
+                </p>
+                <div class="change-benefits">
+                    <h4>Prínosy:</h4>
+                    <ul>
+                        <li>Optimalizované načítanie štýlov</li>
+                        <li>Špecializované dizajny pre rôzne rozlíšenia</li>
+                        <li>Lepší výkon stránky</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="change-item">
+                <h3>5. Interaktívne funkcie a JavaScript</h3>
+                <p class="change-description">
+                    Vytvorili sme funkciu na zmenu veľkosti obsahu v sekcii zmien, ktorá je aktivovateľná viacerými spôsobmi: 
+                    kliknutím na tlačidlo, výberom z dropdown menu, klávesovou skratkou (Ctrl +/-) a automaticky pri zmene 
+                    šírky okna. Táto funkcionalita zlepšuje používateľskú skúsenosť a prístupnosť.
+                </p>
+                <div class="change-benefits">
+                    <h4>Prínosy:</h4>
+                    <ul>
+                        <li>Flexibilné ovládanie veľkosti obsahu</li>
+                        <li>Viacero spôsobov aktivácie pre rôzne preferencie používateľov</li>
+                        <li>Automatická adaptácia na veľkosť obrazovky</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="change-item">
+                <h3>6. Optimalizácia výkonu</h3>
+                <p class="change-description">
+                    Optimalizovali sme kód pre lepší výkon: použili sme CSS Grid a Flexbox namiesto float layoutov, 
+                    implementovali sme lazy loading pre obrázky a minimalizovali sme počet HTTP požiadaviek. 
+                    Všetky CSS a JavaScript súbory sú správne organizované a načítané asynchrónne.
+                </p>
+                <div class="change-benefits">
+                    <h4>Prínosy:</h4>
+                    <ul>
+                        <li>Rýchlejšie načítanie stránky</li>
+                        <li>Lepšia optimalizácia pre mobilné zariadenia</li>
+                        <li>Zniženie spotreby dát</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Náš Tím. Všetky práva vyhradené.</p>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+</body>
+</html>
+

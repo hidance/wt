@@ -1,0 +1,210 @@
+/* Changes page specific styles */
+.controls-section {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+}
+
+.controls-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.size-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-select {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.size-select:hover,
+.size-select:focus {
+    background: var(--primary-color);
+    color: white;
+    outline: none;
+}
+
+.keyboard-hint {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.keyboard-hint kbd {
+    background: var(--bg-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-family: monospace;
+    font-size: 0.85rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Sekcia zmena - base styles */
+.sekcia_zmena {
+    padding: 2rem 0;
+    transition: var(--transition);
+}
+
+.sekcia_zmena h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Size variants */
+.sekcia_zmena.size-small {
+    font-size: 0.9rem;
+}
+
+.sekcia_zmena.size-small h2 {
+    font-size: 2rem;
+}
+
+.sekcia_zmena.size-small h3 {
+    font-size: 1.3rem;
+}
+
+.sekcia_zmena.size-medium {
+    font-size: 1rem;
+}
+
+.sekcia_zmena.size-large {
+    font-size: 1.15rem;
+}
+
+.sekcia_zmena.size-large h2 {
+    font-size: 3rem;
+}
+
+.sekcia_zmena.size-large h3 {
+    font-size: 1.8rem;
+}
+
+.sekcia_zmena.size-xlarge {
+    font-size: 1.3rem;
+}
+
+.sekcia_zmena.size-xlarge h2 {
+    font-size: 3.5rem;
+}
+
+.sekcia_zmena.size-xlarge h3 {
+    font-size: 2rem;
+}
+
+/* Change items */
+.change-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.change-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.change-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.change-description {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.change-benefits {
+    background: rgba(102, 126, 234, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.change-benefits h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.change-benefits ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.change-benefits li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.change-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 550px) {
+    .sekcia_zmena {
+        padding: 1rem 0;
+    }
+
+    .sekcia_zmena h2 {
+        font-size: 1.8rem;
+    }
+
+    .change-item {
+        padding: 1.5rem;
+    }
+
+    .controls-section {
+        padding: 1.5rem;
+    }
+
+    .size-controls {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 850px) {
+    .change-item {
+        padding: 1.75rem;
+    }
+}
+

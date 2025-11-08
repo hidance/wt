@@ -1,0 +1,325 @@
+/* Layout page specific styles */
+.layout-demo-section {
+    padding: 2rem 0;
+}
+
+.layout-demo-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.demo-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.demo-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Flexbox Demo */
+.flexbox-demo {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    min-height: 200px;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.flex-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.flex-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.flex-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.item-1 {
+    flex: 2;
+}
+
+.item-2 {
+    flex: 1;
+}
+
+.item-3 {
+    flex: 1;
+}
+
+/* Grid Demo */
+.grid-demo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 1rem;
+    min-height: 400px;
+}
+
+.grid-header {
+    grid-area: header;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.grid-sidebar {
+    grid-area: sidebar;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.grid-main {
+    grid-area: main;
+    background: rgba(118, 75, 162, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+}
+
+.grid-footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.grid-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.grid-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Nested Grid */
+.nested-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.nested-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.nested-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Combined Demo */
+.combined-demo {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    min-height: 400px;
+}
+
+.combined-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.combined-content {
+    display: flex;
+    gap: 1rem;
+    min-height: 300px;
+}
+
+.combined-sidebar {
+    flex: 0 0 250px;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.combined-sidebar ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.combined-sidebar li {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: white;
+    border-radius: 5px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.combined-sidebar li:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.combined-main {
+    flex: 1;
+    background: rgba(118, 75, 162, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+}
+
+.combined-main h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.card:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.combined-footer {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 550px) {
+    .flexbox-demo {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        min-width: 100%;
+    }
+
+    .grid-demo {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .combined-content {
+        flex-direction: column;
+    }
+
+    .combined-sidebar {
+        flex: 1;
+    }
+
+    .nested-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 850px) {
+    .flexbox-demo {
+        flex-direction: column;
+    }
+
+    .grid-demo {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .combined-content {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 851px) and (max-width: 1250px) {
+    .flexbox-demo {
+        flex-wrap: wrap;
+    }
+
+    .item-1 {
+        flex: 1 1 100%;
+    }
+
+    .grid-demo {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
